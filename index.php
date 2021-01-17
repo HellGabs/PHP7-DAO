@@ -2,10 +2,10 @@
 
 require_once("config.php");
 
-$sql = new Sql();
+$filme = new Filme();
 
-$results = $sql->select("SELECT * FROM filmes");
+$filme->loadById(1);
 
-echo json_encode($results);
+echo $filme;
 
 ?>
